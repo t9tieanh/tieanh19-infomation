@@ -21,12 +21,29 @@ document.getElementById('exampleCheck1').addEventListener('change', function() {
 document.querySelector('#submitForm').onsubmit = function (e) {
     e.preventDefault(); 
 
+    var elements = document.querySelectorAll('.alert.alert-danger');
+
+        
+    // Lặp qua từng phần tử và xóa nó khỏi DOM
+    elements.forEach(function(element) {
+        element.remove();
+    });
+
     // truy vào các element tương ứng 
     let nameoObj = document.querySelector('input[name="name"]'); 
     let messageObj = document.querySelector ('textarea[name = "message"]')
 
     // get giá trị 
-    let name = (nameoObj.value.trim() == "") ? name = "hidder" : nameoObj.value
+    let name = "hidder" ;
+    if (document.getElementById('exampleCheck1').checked == false) {
+        if (nameoObj.value.trim() == "") {
+            document.getElementById("message-div").innerHTML +=
+            '<div class="alert alert-danger" role="alert" style ="margin : 10px"> '+
+            "You haven't entered your name yet!"
+            return
+        }
+        name =  nameoObj.value
+    }
 
     let message = messageObj.value
 

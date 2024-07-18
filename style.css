@@ -53,8 +53,8 @@ body {
     }
 
     .about-me {
-        margin-left: 28px;
-        margin-top: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
         line-height: 2;
         font-size: 25px; color: black;
     }
@@ -69,8 +69,16 @@ body {
 
     .content {
         height: 900px;
-        background-color: #f5f6fa
-        /* background: url(image/rivage-SZGdof7rk7g-unsplash.jpg) no-repeat center center; */
+        /* background-color: #f5f6fa */
+        background: url(image/artem-sapegin-b18TRXc8UPQ-unsplash.jpg) no-repeat  ;
+        background-size: contain;
+    }
+
+    .flex-row {
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
     }
 
     .text-muted {
@@ -115,4 +123,16 @@ body {
 
     .fade-in {
         animation: fadeIn 1s forwards;
+    }
+
+
+    .infomation {
+        background-color: #fdfeff47;
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+
+        margin-left : 100px; margin-right: 100px   ;
     }
