@@ -1,78 +1,26 @@
-document.getElementById('exampleCheck1').addEventListener('change', function() {
+var t2 = new SplitText('.txt2').chars,
+    color2 = '#17c0fd',
+    color1 = '#000000',
+    moveBar = () => { gsap.set('.bar', { left: gsap.getProperty('.txt1', 'width') + 1 }) };
 
-    const element = document.getElementById('input-name');
-    if (element.classList.contains('fade-out')) {
-        element.classList.remove('fade-out');
-        element.classList.add('fade-in');
-    } else {
-        element.classList.remove('fade-in');
-        element.classList.add('fade-out');
-    }
+// Timeline chính
+gsap.timeline({ delay: 0.2 })
+    .set('.txt1', { color: color1, fontWeight: 'regular' })
+    .set('.txt2', { color: color2, fontWeight: 'bold', opacity: 0, x: gsap.getProperty('.txt1', 'width') - 2, immediateRender: true })
+    .set('.bar', { left: 1, backgroundColor: color1, immediateRender: true })
 
-    var img = document.getElementById('myImage');
-    if (this.checked) {
-        img.src = 'image/giphy.webp'; // Thay đổi đường dẫn hình ảnh ở đây
-    } else {
-        img.src = 'image/giphy (1).webp'; // Đường dẫn hình ảnh ban đầu
-    }
-});
+    .to('.bar', { duration: 0.1, opacity: 0, ease: Expo.easeIn, yoyo: true, repeat: 5, repeatDelay: 0.3 }, 0)
+    .from('.txt1', { duration: 1.1, width: 0, ease: SteppedEase.config(14), onUpdate: moveBar }, 2.5)
+    .to('.bar', { duration: 0.05, backgroundColor: color2 }, '+=0.15')
+    .to('.bar', { duration: 1.0, width: 290, ease: Power4.easeInOut }, '+=0.1')
+    .from('.container', { duration: 1.0, x: 135, ease: Power4.easeInOut }, '-=1.0')
+    .to('.txt2', { duration: 0.01, opacity: 1 }, '-=0.1')
+    .to('.bar', { duration: 0.4, x: 290, width: 0, ease: Power4.easeIn })
+    .from(t2, { duration: 0.6, opacity: 0, ease: Power3.easeInOut, stagger: 0.02 }, '-=0.5')
+    .to('.txt1', { duration: 1.5, opacity: 0.25, ease: Power3.easeInOut }, '-=1.2')
+    .timeScale(1.45);
 
-
-document.querySelector('#submitForm').onsubmit = function (e) {
-    e.preventDefault(); 
-
-    var elements = document.querySelectorAll('.alert.alert-danger');
-
-        
-    // Lặp qua từng phần tử và xóa nó khỏi DOM
-    elements.forEach(function(element) {
-        element.remove();
-    });
-
-    // truy vào các element tương ứng 
-    let nameoObj = document.querySelector('input[name="name"]'); 
-    let messageObj = document.querySelector ('textarea[name = "message"]')
-
-    // get giá trị 
-    let name = "hidder" ;
-    if (document.getElementById('exampleCheck1').checked == false) {
-        if (nameoObj.value.trim() == "") {
-            document.getElementById("message-div").innerHTML +=
-            '<div class="alert alert-danger" role="alert" style ="margin : 10px"> '+
-            "You haven't entered your name yet!"
-            return
-        }
-        name =  nameoObj.value
-    }
-
-    let message = messageObj.value
-
-    if (message.trim()=="") {
-        document.getElementById("message-div").innerHTML +=
-            '<div class="alert alert-danger" role="alert" style ="margin : 10px"> '+
-            'messenger is empty! </div>'
-        return
-    }
-
-    let data = {
-        'entry.5126401' : name, 
-        'entry.937891274' : message
-    }
-
-    let queryString = new URLSearchParams (data) 
-    queryString = queryString.toString()
-    // console.log (queryString)
-
-    let xhr = new XMLHttpRequest ();
-    xhr.open("POST", 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSecyw_F651dFU8kqfr-bHOJQEm99gIDzgN1i2zbKzdFgOfH8A/formResponse',true)
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    document.getElementById("submitForm").innerHTML 
-    = '<div class="alert alert-success" role="alert" style="margin-top: 20px;">' +
-                'Sent successfully, I will see your message soon, thank you very much ! </div>'
-
-    xhr.send(queryString);
-    
-    // console.log (data)
-
-}
+// Timeline thứ hai với delay và onComplete để chuyển trang sau khi hoàn thành hiệu ứng
+gsap.timeline({ delay: 5, onComplete: function() {
+    window.location.href = 'info-web/index.html';
+}});
