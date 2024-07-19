@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", function() {
         introDiv.style.display = "none";
         mainForm.style.display = "block";
         otherElement.style.display = "block" ;
-    }, 3000);
+    }, 2000);
 });
