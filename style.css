@@ -139,3 +139,42 @@ body {
 
         margin-left : 100px; margin-right: 100px   ;
     }
+
+    /* body {
+        font-family: Arial, sans-serif;
+    } */
+    
+    #introDiv {
+        opacity: 0;
+        transition: opacity 2s;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* dùng cho /animation */
+
+    .txt2 {
+        position: relative;
+        font-family: Arial, sans-serif;
+        color: #17c0fd; /* Màu xanh */
+        font-weight: bold;
+        display: inline-block;
+        white-space: nowrap; /* Giữ đoạn văn bản trên một dòng */
+    }
+
+    @keyframes gentleShake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-1px); }
+        50% { transform: translateX(1px); }
+        75% { transform: translateX(-1px); }
+        100% { transform: translateX(0); }
+    }
+    
+    #intro-text {
+        animation: gentleShake 2s ease-in-out infinite;
+        animation-iteration-count: infinite; /* Lặp lại vô tận */
+    }
+    
+    
