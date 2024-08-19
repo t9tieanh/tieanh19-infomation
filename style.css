@@ -71,6 +71,7 @@ body {
 
     .content {
         height: 900px;
+        width: 100%;
         /* background-color: #f5f6fa */
         background: url(image/artem-sapegin-b18TRXc8UPQ-unsplash.jpg) no-repeat  ;
         /* background-size: contain; */
