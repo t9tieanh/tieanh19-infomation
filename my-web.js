@@ -21,7 +21,6 @@ var webs = [
 ]
 
 var buttons = document.querySelectorAll('[name="detail-web-button"]')
-console.log (webs)
 
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
