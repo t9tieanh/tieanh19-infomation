@@ -90,7 +90,7 @@ body {
         font-size: 15px;
     }
 
-    .btn-primary ,.btn-outline-dark {
+    .btn-primary {
         animation: shake 1.5s infinite; /* Infinite loop */
     }
 
