@@ -307,14 +307,14 @@ ul.left-icon.hotline {
 
 
 .float-icon-hotline ul li .fa-zalo {
-    background: url(../image/zalo.png) center center no-repeat;
+    background: url(image/zalo.png) center center no-repeat;
 }
 .float-icon-hotline ul li .fa-zalo:hover {
-    background: #ef0303 url(../image/zalo.png) center center no-repeat;opacity:.5;
+    background: #ef0303 url(image/zalo.png) center center no-repeat;opacity:.5;
 }
 .float-icon-hotline ul li .fa-messenger {
-    background:  url(../image/fb.png) center center no-repeat;
+    background:  url(image/fb.png) center center no-repeat;
 }
 .float-icon-hotline ul li .fa-messenger:hover {
-    background: #168efb url(../image/fb.png) center center no-repeat;opacity:.5;
+    background: #168efb url(image/fb.png) center center no-repeat;opacity:.5;
 }
