@@ -4,9 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var otherElement = document.getElementById("other-element")
     introDiv.style.opacity = 1;
 
-    setTimeout(function() {
-        introDiv.style.display = "none";
+    introDiv.style.display = "none";
         mainForm.style.display = "block";
         otherElement.style.display = "block" ;
-    }, 2000);
+
+    // setTimeout(function() {
+    //     introDiv.style.display = "none";
+    //     mainForm.style.display = "block";
+    //     otherElement.style.display = "block" ;
+    // }, 2000);
 });
