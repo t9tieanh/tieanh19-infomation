@@ -76,7 +76,7 @@ body {
         background: url(image/artem-sapegin-b18TRXc8UPQ-unsplash.jpg) no-repeat  ;
         /* background-size: contain; */
         background-size: 100% 100%;
-        position: fixed; z-index: 1000; bottom: 0;
+        /* position: fixed; z-index: 1000; bottom: 0; */
     }
 
     .flex-row {
