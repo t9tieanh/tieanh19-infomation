@@ -24,16 +24,33 @@ var buttons = document.querySelectorAll('[name="detail-web-button"]')
 
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
-      web = findWeb(button.id)
-      
-      document.getElementById("title").innerText = web.title
-      document.getElementById("createDate").innerHTML = web.createDate
 
-      document.querySelector("#linkGithub a").setAttribute("href", web.linkGithub);
-      document.querySelector("#linkGithub cite").innerHTML = web.linkGithub;
+        const width = window.innerWidth;
+        web = findWeb(button.id)
+        
+        if (width <= 992) {
+            $('#exampleModal').modal('show'); // Hiển thị modal khi nhấp vào
 
-      document.querySelector("#linkWeb a").setAttribute("href", web.linkWeb);
-      document.querySelector("#linkWeb cite").innerHTML = web.linkWeb;
+            document.getElementById("exampleModalLabel").innerHTML = web.title
+            document.getElementById("createDate-modal").innerHTML = web.createDate
+
+            document.querySelector("#linkGithub-modal a").setAttribute("href", web.linkGithub);
+            document.querySelector("#linkGithub-modal cite").innerHTML = web.linkGithub;
+
+            document.querySelector("#linkWeb-modal a").setAttribute("href", web.linkWeb);
+            document.querySelector("#linkWeb-modal cite").innerHTML = web.linkWeb;
+
+            return
+        }
+        
+        document.getElementById("title").innerText = web.title
+        document.getElementById("createDate").innerHTML = web.createDate
+
+        document.querySelector("#linkGithub a").setAttribute("href", web.linkGithub);
+        document.querySelector("#linkGithub cite").innerHTML = web.linkGithub;
+
+        document.querySelector("#linkWeb a").setAttribute("href", web.linkWeb);
+        document.querySelector("#linkWeb cite").innerHTML = web.linkWeb;
     });
 });
 
@@ -42,6 +59,7 @@ function findWeb(id) {
       return web.id === id;
     });
 }
+
 
 
 
