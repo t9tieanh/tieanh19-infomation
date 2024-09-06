@@ -12,7 +12,7 @@ var webs = [
     new Web("2","Build a basic web using Java servlet - How to do it?", 
         "4th September,2024",
         "https://github.com/t9tieanh/basic-web",
-        "https://tieanh-laptrinhweb.onrender.com"), 
+        "https://tieanh19-basicweb.up.railway.app"), 
 
     new Web("1","Build a basic web introduce myself - How to do it?",
         "18th July, 2024 - now",
