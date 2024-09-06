@@ -203,5 +203,10 @@ body {
         width: 11px;
         content: "";
       }
+
+      .btn-link:hover {
+        animation: gentleShake 2s;
+      }
+      
     
     

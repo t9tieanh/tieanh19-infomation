@@ -78,3 +78,12 @@
       to right,
     );
   }
+
+  .btn-shake {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #007bff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
