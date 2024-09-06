@@ -3,157 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flow Layer Panel with Scroll</title>
+  <title>Custom Drop-down Button</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .scroll-panel {
-      height: 300px; /* Đặt chiều cao của panel */
-      overflow-y: auto; /* Thêm thanh cuộn theo chiều dọc */
-    }
-    /* The actual timeline (the vertical ruler) */
-    .main-timeline-5 {
-      position: relative;
-      max-width: 50%;
-      margin: 0 auto;
+    /* Customizing the drop button */
+    .custom-dropdown-toggle {
+      background-color: #f8f9fa;
+      border: none;
+      color: #000;
     }
 
-    /* The actual timeline (the vertical ruler) */
-    .main-timeline-5::after {
-      content: "";
-      position: absolute;
-      width: 3px;
-      background-color: #fff;
-      top: 0;
-      bottom: 0;
-      left: auto;
-      margin-left: -3px;
+    .custom-dropdown-toggle:hover {
+      background-color: #e9ecef;
     }
 
-    /* Container around content */
-    .timeline-5 {
-      position: relative;
-      background-color: inherit;
-      width: 100%;
+    .dropdown-icon {
+      font-size: 24px;
     }
 
-    /* The circles on the timeline */
-    .timeline-5::after {
-      content: "";
-      position: absolute;
-      width: 17px;
-      height: 17px;
-      right: 1px;
-      background-color: #fff;
-      top: 18px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    /* Place the container to the right */
-    .right-5 {
-      padding: 0px 0px 20px 40px;
-      left: auto;
-    }
-
-    /* Add arrows to the right container (pointing left) */
-    .right-5::before {
-      content: " ";
-      position: absolute;
-      top: 18px;
-      z-index: 1;
-      left: 30px;
-      border: medium solid #fff;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent #fff transparent transparent;
-    }
-
-    /* Fix the circle for containers on the right side */
-    .right-5::after {
-      left: -10px;
-    }
-
-    @media (max-width: 991px) {
-      .main-timeline-5 {
-        max-width: 100%;
-      }
-    }
-    .gradient-custom-5 {
-      /* fallback for old browsers */
-      background: #ebbba7;
-
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: -webkit-linear-gradient(
-        to right,
-        rgba(235, 187, 167, 1),
-        rgba(207, 199, 248, 1)
-      );
-
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      background: linear-gradient(
-        to right,
-        rgba(235, 187, 167, 1),
-        rgba(207, 199, 248, 1)
-      );
+    /* Force the dropdown to the left of the button */
+    .dropdown-menu-custom {
+      right: 0; /* Ensure the menu aligns to the right edge of the button */
+      left: auto; /* Disable left alignment */
+      transform: translate(0, 100%); /* Shift dropdown below the button */
     }
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <div class="scroll-panel border p-3">
-      <div class="row gy-3">
-        <section class="gradient-custom-5" style="width:100%">
-          <div class="container py-5">
-              <div class="main-timeline-5">
-              <div class="timeline-5 right-5">
-                  <div class="card">
-                  <div class="card-body p-4">
-                      <h5>Murach Survey</h5>
-                      <span class="small text-muted"><i class="fas fa-clock me-1"></i>4th September,2024</span>
-                      <p class="mt-2 mb-0">Build a basic web using Java servlet - How to do it?</p>
-                  </div>
-                  </div>
-              </div>
 
-              <div class="timeline-5 right-5">
-                  <div class="card">
-                  <div class="card-body p-4">
-                      <h5>Updating ... </h5>
-                      <span class="small text-muted"><i class="fas fa-clock me-1"></i></span>
-                      <p class="mt-2 mb-0">Updating ... </p>
-                  </div>
-                  </div>
-              </div>
-
-              <div class="timeline-5 right-5">
-                <div class="card">
-                <div class="card-body p-4">
-                    <h5>Updating ... </h5>
-                    <span class="small text-muted"><i class="fas fa-clock me-1"></i></span>
-                    <p class="mt-2 mb-0">Updating ... </p>
-                </div>
-                </div>
-            </div>
-
-            <div class="timeline-5 right-5">
-              <div class="card">
-              <div class="card-body p-4">
-                  <h5>Updating ... </h5>
-                  <span class="small text-muted"><i class="fas fa-clock me-1"></i></span>
-                  <p class="mt-2 mb-0">Updating ... </p>
-              </div>
-              </div>
-          </div>
-              
-          </div>
-          
-          </section>
-
-      </div>
-    </div>
+  <div class="btn-group dropleft position-relative">
+    <button class="btn custom-dropdown-toggle dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="dropdown-icon">≡</span> <!-- Custom icon here -->
+    </button>
+    <!-- Add 'dropdown-menu-custom' to control its position -->
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">GitHub</a></li>
+      <li><a class="dropdown-item" href="#">TikTok</a></li>
+      <li><a class="dropdown-item" href="#">Facebook</a></li>
+      <li><a class="dropdown-item" href="#">Instagram</a></li>
+      <li><a class="dropdown-item" href="#">Contact</a></li>
+    </ul>
   </div>
 
-  <!-- Bootstrap JS (Optional) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

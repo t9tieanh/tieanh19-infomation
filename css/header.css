@@ -1,0 +1,20 @@
+.dropdown-menu {
+    position: absolute; /* Đặt position thành absolute */
+    top: 100%; /* Đặt dropdown-menu nằm ngay dưới button */
+    left: 0;
+    z-index: 1050; /* Đảm bảo z-index đủ cao để đè lên các phần tử khác */
+}
+
+.custom-dropdown-toggle {
+    background-color: #f8f9fa;
+    border: none;
+    color: #000;
+}
+
+.custom-dropdown-toggle:hover {
+    background-color: #e9ecef;
+}
+
+.dropdown-icon {
+    font-size: 22px;
+}
