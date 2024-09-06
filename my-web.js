@@ -15,7 +15,7 @@ var webs = [
         "https://tieanh-laptrinhweb.onrender.com"), 
 
     new Web("1","Build a basic web introduce myself - How to do it?",
-        "18th July, 2024",
+        "18th July, 2024 - now",
         "https://github.com/t9tieanh/tieanh19-infomation",
         "https://t9tieanh.github.io/tieanh19-infomation")
 ]
