@@ -4,15 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var otherElement = document.getElementById("other-element")
     introDiv.style.opacity = 1;
 
-    introDiv.style.display = "none";
+    setTimeout(function() {
+        introDiv.style.display = "none";
         mainForm.style.display = "block";
         otherElement.style.display = "block" ;
-
-    // setTimeout(function() {
-    //     introDiv.style.display = "none";
-    //     mainForm.style.display = "block";
-    //     otherElement.style.display = "block" ;
-    // }, 2000);
+    }, 2000);
 });
 
 var btnMoreInfo = document.getElementById("more-info")
