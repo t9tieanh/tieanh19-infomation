@@ -14,3 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
     //     otherElement.style.display = "block" ;
     // }, 2000);
 });
+
+var btnMoreInfo = document.getElementById("more-info")
+
+btnMoreInfo.addEventListener('click', function() {
+    $('#exampleModal').modal('show'); // Hiển thị modal khi nhấp vào
+});
+
