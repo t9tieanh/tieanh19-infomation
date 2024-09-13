@@ -59,6 +59,7 @@ body {
         padding-left: 20px;
         line-height: 2;
         font-size: 25px; color: black;
+        width: 500px;
     }
 
     .navbar-brand .name, .about-me {
@@ -158,7 +159,7 @@ body {
     .txt2 {
         position: relative;
         font-family: Arial, sans-serif;
-        color: #17c0fd; /* Màu xanh */
+        color: #127498; /* Màu xanh */
         font-weight: bold;
         display: inline-block;
         white-space: nowrap; /* Giữ đoạn văn bản trên một dòng */
