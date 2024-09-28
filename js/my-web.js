@@ -9,6 +9,12 @@ function Web (id, title, createDate, linkGithub, linkWeb) {
 
 
 var webs = [
+
+    new Web("3","Use session in java servlet to create basic shopping cart functionality - How to do it?", 
+        "26th September,2024",
+        "https://github.com/t9tieanh/shopping-cart",
+        "https://shopping-cart-deploy-production.up.railway.app/shop"), 
+
     new Web("2","Build a basic web using Java servlet - How to do it?", 
         "4th September,2024",
         "https://github.com/t9tieanh/basic-web",
