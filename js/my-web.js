@@ -10,6 +10,11 @@ function Web (id, title, createDate, linkGithub, linkWeb) {
 
 var webs = [
 
+    new Web("4","Create a jdbc application project to execute sql statements - How to do it ?", 
+        "3th October,2024",
+        "https://github.com/t9tieanh/SqlQuery",
+        "https://sqlquerry-deploy-production.up.railway.app/home"), 
+
     new Web("3","Use session in java servlet to create basic shopping cart functionality - How to do it?", 
         "26th September,2024",
         "https://github.com/t9tieanh/shopping-cart",
