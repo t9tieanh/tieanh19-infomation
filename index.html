@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infomation</title>
-    <link rel="icon" href="image/2qQ8Gz7D_400x400.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="image/2qQ8Gz7D_400x400.ico" type="image/x-icon"> 
     <!-- Bootstrap 5 CSS -->
-
+    <link href="template/mdb.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -53,11 +51,12 @@
             Welcome to 
             <span class="txt2" style="color: black;">t9tieanh</span>
             <span class="txt2">/infomation</span>
-            <footer class="blockquote-footer">Developed by <cite title="Source Title">Pham Tien Anh</cite></footer>
+            <footer class="blockquote-footer" style="margin-top: 0px;">Developed by <cite title="Source Title">Pham Tien Anh</cite></footer>
         </div>
     </div>
 
     <div id="mainForm" style="display: none;">
+        
         <div class="header">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
@@ -72,12 +71,13 @@
                   </a>
 
 
+
                   <!-- Dropdown for mobile view -->
                 <div class="d-lg-none">
                     <!-- <button type="button" id="more-info" class="btn btn-outline-dark">+</button> -->
 
-                    <div class="btn-group dropleft position-relative">
-                        <button class="btn custom-dropdown-toggle dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="btn-group dropstart">
+                        <button class="btn dropdown-toggle" data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" >
                             <span class="dropdown-icon">≡</span> <!-- Custom icon here -->
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
@@ -90,12 +90,13 @@
                         </ul>
 
                     </div>
+
                 </div>
 
 
 
 
-                <div class="btn-group d-none d-lg-block">
+                <div class="d-none d-lg-block">
                 <a href="my-web.html"><button type="button" class="btn btn-link" style="margin-right: 10px;"><i class="fas fa-book-open"></i> Share and learn knowledge.</button></a>
                 <a href="https://github.com/t9tieanh">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" style="margin: 5px;">

@@ -1,280 +1,55 @@
-<%@include file="/common/taglib.jsp"%>
-<!-- Section: Design Block -->
-<style>
-    #profileImagePreview {
-        display: block;
-        margin-top: 10px;
-        max-width: 200px;
-        height: auto;
-        border-radius: 0%;
-        border: 2px solid #ddd;
-    }
-</style>
-<section class="">
-    <!-- Jumbotron -->
-    <div class="px-4 py-5 px-md-5 text-center text-lg-start">
-        <div class="container">
-            <div class="row gx-lg-5 align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h1 class="my-5 display-3 fw-bold ls-tight">
-                        The best offer <br />
-                        <span class="text-primary">for your business</span>
-                    </h1>
-                    <p style="color: hsl(217, 10%, 50.8%)">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-                        quibusdam tempora at cupiditate quis eum maiores libero
-                        veritatis? Dicta facilis sint aliquid ipsum atque?
-                    </p>
-                </div>
-
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="card">
-                        <div class="card-body py-5 px-md-5">
-                            <form>
-                                <img id="profileImagePreview" src="" alt="Profile Picture Preview" style="margin-bottom:10px ;" />
-                                <!-- Profile Image Upload -->
-                                <div class="col-md-6 mb-4">
-                                    <div data-mdb-input-init class="form-outline">
-                                        <input type="file" id="profileImage" class="form-control" accept="image/*" />
-                                    </div>
-                                </div>
-
-                                <!-- 2 column grid layout with text inputs for the first and last names -->
-                                <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                        <div data-mdb-input-init class="form-outline">
-                                            <input name="name" type="text" id="form3Example1" class="form-control" />
-                                            <label class="form-label" for="form3Example1">Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                        <div data-mdb-input-init class="form-outline">
-                                            <input name="email" type="email" id="form3Example2" class="form-control" />
-                                            <label class="form-label" for="form3Example2">Email</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Password input -->
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                    <input name = "phone" type="tel" id="form6Example6" class="form-control" />
-                                    <label class="form-label" for="form6Example6">Tel</label>
-                                </div>
-
-                                <!-- Password input -->
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                    <input name="password" type="password" id="form3Example4" class="form-control" />
-                                    <label class="form-label" for="form3Example4">Password</label>
-                                </div>
-
-                                <!-- Password input -->
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                    <input name="confirmPassword" type="Password" id="form6Example4" class="form-control" />
-                                    <label class="form-label" for="form6Example4">Confirm Password</label>
-                                </div>
-
-                                <!-- Checkbox -->
-                                <div class="form-check d-flex justify-content-center mb-4">
-                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                                    <label class="form-check-label" for="form2Example33">
-                                        Subscribe to our newsletter
-                                    </label>
-                                </div>
-
-                                <!-- Submit button -->
-                                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-                                    Sign up
-                                </button>
-
-                                <!-- Register buttons -->
-                                <div class="text-center">
-                                    <p>or sign up with:</p>
-                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </button>
-
-                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-google"></i>
-                                    </button>
-
-                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-twitter"></i>
-                                    </button>
-
-                                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                                        <i class="fab fa-github"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Jumbotron -->
-</section>
-<!-- Section: Design Block -->
-
-<!-- MDBootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
-<script>
-    document.getElementById('profileImage').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                document.getElementById('profileImagePreview').src = e.target.result;
-            };
-            reader.readAsDataURL(file);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDB Dropdown Example</title>
+    <!-- MDB CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
+    <style>
+        /* Force dropdown to open to the left */
+        .btn-group.dropstart .dropdown-menu {
+            right: 100%; /* Moves it to the left */
+            left: auto; /* Disable the default left alignment */
         }
-    });
+    </style>
+</head>
+<body>
 
-    $('#btnTeacherSubmit').click(function (e) {
-        e.preventDefault();
-        var data = {};
-        var formData = $('#formTeacherSubmit').serializeArray();
-        $.each(formData, function (i, v) {
-            data[v.name] = v.value;
-        });
-        signUp(data, '${APIurlTeacher}');
-    });
-
-    <%--$('#btnStudentSubmit').click(function (e) {--%>
-    <%--    e.preventDefault();--%>
-    <%--    var data = {};--%>
-    <%--    var formData = $('#formStudentSubmit').serializeArray();--%>
-    <%--    $.each(formData, function (i, v) {--%>
-    <%--        data[v.name] = v.value;--%>
-    <%--    });--%>
-    <%--    signUp(data, '${APIurlStudent}');--%>
-    <%--});--%>
-
-    function signUp(data, apiUrl) {
-        $.ajax({
-            url: apiUrl,
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(data),
-            dataType: 'json',
-            success: function () {
-                window.location.href = "${NewURL}";
-            },
-            error: function () {
-                window.location.href = "${NewURL}";
-            }
-        });
+  
+    import React from 'react';
+    import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBBtn } from 'mdb-react-ui-kit';
+    
+    export default function App() {
+      return (
+        <>
+          <MDBDropdown dropleft group>
+            <MDBDropdownToggle>Dropleft</MDBDropdownToggle>
+            <MDBDropdownMenu>
+              <MDBDropdownItem link>Action</MDBDropdownItem>
+              <MDBDropdownItem link>Another action</MDBDropdownItem>
+              <MDBDropdownItem link>Something else here</MDBDropdownItem>
+              <MDBDropdownItem divider />
+              <MDBDropdownItem link>Separated link</MDBDropdownItem>
+            </MDBDropdownMenu>
+          </MDBDropdown>
+    
+          <MDBDropdown dropleft group>
+            <MDBBtn>Split Dropleft</MDBBtn>
+            <MDBDropdownToggle />
+            <MDBDropdownMenu>
+              <MDBDropdownItem link>Action</MDBDropdownItem>
+              <MDBDropdownItem link>Another action</MDBDropdownItem>
+              <MDBDropdownItem link>Something else here</MDBDropdownItem>
+              <MDBDropdownItem divider />
+              <MDBDropdownItem link>Separated link</MDBDropdownItem>
+            </MDBDropdownMenu>
+          </MDBDropdown>
+        </>
+      );
     }
-</script>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">--%>
-<%--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>--%>
-<%--    <title>Sign Up</title>--%>
-<%--</head>--%>
-<%--<body>--%>
-<%--<div class="row" style="margin:0 auto; height:90vh;">--%>
 
-<%--    <div class="col-6" style="padding: 30px; margin-top:20px;">--%>
-<%--        <h2>Sign Up as A Teacher</h2>--%>
-<%--        <br>--%>
-<%--        <form id="formTeacherSubmit">--%>
-<%--            <!-- {% csrf_token %} -->--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="text" name="name" class="form-control" id="name" placeholder="Type Your Name" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="email" name="email" class="form-control" id="email" placeholder="Type Your Email" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="password" name="password" class="form-control" id="password1" placeholder="Password" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="password" name="confirmPassword" class="form-control" id="password2" placeholder="Confirm Password" required>--%>
-<%--            </div>--%>
-<%--            <input type="hidden" value="teacher" id="role" name="role"/>--%>
-<%--            <button id="btnTeacherSubmit" type="submit" class="btn btn-primary" style="width:100%; margin: 0 auto;">Sign Up</button>--%>
-<%--        </form>--%>
-<%--        <hr>--%>
-<%--        <div class="text-center">--%>
-<%--            Do you already have an account? <a href="/register/login">Login here</a>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-
-<%--    <div class="col-6" style="padding: 30px; margin-top:20px; border-radius: 10px;">--%>
-<%--        <h2>Sign Up as A Student</h2>--%>
-<%--        <br>--%>
-<%--        <form id="formStudentSubmit">--%>
-<%--            <!-- {% csrf_token %} -->--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="text" name="name" class="form-control" id="studentName" placeholder="Type Your Name" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="email" name="email" class="form-control" id="studentEmail" placeholder="Type Your Email" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="password" name="password" class="form-control" id="studentPassword1" placeholder="Type Password" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="password" name="confirmPassword" class="form-control" id="studentPassword2" placeholder="Confirm Your Password" required>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <input type="file" name="image" class="form-control" id="image" required>--%>
-<%--            </div>--%>
-<%--            <input type="hidden" value="student" name="role"/>--%>
-<%--            <button id="btnStudentSubmit" type="submit" class="btn btn-primary" style="width:100%; margin:0 auto;">Sign Up</button>--%>
-<%--        </form>--%>
-<%--        <hr>--%>
-<%--        <div class="text-center">--%>
-<%--            Do you already have an account? <a href="/register/login">Login here</a>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-<%--<script>--%>
-<%--    $('#btnTeacherSubmit').click(function (e) {--%>
-<%--        e.preventDefault(); // Ngăn chặn hành động mặc định của button--%>
-
-<%--        var data = {};--%>
-<%--        var formData = $('#formTeacherSubmit').serializeArray();--%>
-<%--        $.each(formData, function (i, v) {--%>
-<%--            data[v.name] = v.value;--%>
-<%--        });--%>
-
-<%--        signUp(data,'${APIurlTeacher}');--%>
-<%--    });--%>
-
-<%--    $('#btnStudentSubmit').click(function (e) {--%>
-<%--        e.preventDefault(); // Ngăn chặn hành động mặc định của button--%>
-
-<%--        var data = {};--%>
-<%--        var formData = $('#formStudentSubmit').serializeArray();--%>
-<%--        $.each(formData, function (i, v) {--%>
-<%--            data[v.name] = v.value;--%>
-<%--        });--%>
-
-<%--        signUp(data,'${APIurlStudent}');--%>
-<%--    });--%>
-
-<%--    function signUp(data, apiUrl) {--%>
-<%--        $.ajax({--%>
-<%--            url: apiUrl,--%>
-<%--                &lt;%&ndash;'${APIurl}',&ndash;%&gt;--%>
-<%--            type: 'POST',--%>
-<%--            contentType: 'application/json',--%>
-<%--            data: JSON.stringify(data),--%>
-<%--            dataType: 'json',--%>
-<%--            success: function (result) {--%>
-<%--                window.location.href = "${NewURL}";--%>
-<%--            },--%>
-<%--            error: function (error) {--%>
-<%--                window.location.href = "${NewURL}";--%>
-<%--            }--%>
-<%--        });--%>
-<%--    }--%>
-<%--</script>--%>
-<%--</body>--%>
-<%--</html>--%>
-
-"https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email&redirect_uri=http://localhost:8080/RegisterGoogleHandler&response_type=code--%>
-<%--		   &client_id=1039999698127-4im2l1mcar0nvg10282ri4gqi65trhvf.apps.googleusercontent.com&approval_prompt=force"
+  <!-- MDB JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+</body>
+</html>
