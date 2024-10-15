@@ -10,6 +10,11 @@ function Web (id, title, createDate, linkGithub, linkWeb) {
 
 var webs = [
 
+    new Web("5","Implement connection pool to create connection in jdbc - How to do it ?", 
+        "9th October,2024",
+        "https://github.com/t9tieanh/Connection-pool",
+        "https://connection-pool-deploy.onrender.com/home"), 
+
     new Web("4","Create a jdbc application project to execute sql statements - How to do it ?", 
         "3th October,2024",
         "https://github.com/t9tieanh/SqlQuery",
