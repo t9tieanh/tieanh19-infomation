@@ -10,6 +10,16 @@ function Web (id, title, createDate, linkGithub, linkWeb) {
 
 var webs = [
 
+    new Web("7","Simple java mail project to send emails - How to do it ?", 
+        "25th October,2024",
+        "https://github.com/t9tieanh/javamail",
+        "https://javamail-deploy.onrender.com"), 
+
+    new Web("6","Build a JPA project - How to do it ?", 
+        "18th October,2024",
+        "https://github.com/t9tieanh/jpa-project",
+        "https://jpa-project-deploy.onrender.com"), 
+
     new Web("5","Implement connection pool to create connection in jdbc - How to do it ?", 
         "9th October,2024",
         "https://github.com/t9tieanh/Connection-pool",
@@ -18,17 +28,17 @@ var webs = [
     new Web("4","Create a jdbc application project to execute sql statements - How to do it ?", 
         "3th October,2024",
         "https://github.com/t9tieanh/SqlQuery",
-        "https://sqlquerry-deploy-production.up.railway.app/home"), 
+        "https://sqlquerry-deploy.onrender.com"), 
 
     new Web("3","Use session in java servlet to create basic shopping cart functionality - How to do it?", 
         "26th September,2024",
         "https://github.com/t9tieanh/shopping-cart",
-        "https://shopping-cart-deploy-production.up.railway.app/shop"), 
+        "https://shopping-cart-deploy-u6i2.onrender.com"), 
 
     new Web("2","Build a basic web using Java servlet - How to do it?", 
         "4th September,2024",
         "https://github.com/t9tieanh/basic-web",
-        "https://tieanh19-basicweb.up.railway.app"), 
+        "https://tieanh-laptrinhweb.onrender.com/trang-chu"), 
 
     new Web("1","Build a basic web introduce myself - How to do it?",
         "18th July, 2024 - now",
