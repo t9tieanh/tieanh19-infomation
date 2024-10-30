@@ -13,7 +13,7 @@ var webs = [
     new Web("7","Simple java mail project to send emails - How to do it ?", 
         "25th October,2024",
         "https://github.com/t9tieanh/javamail",
-        "https://javamail-deploy.onrender.com"), 
+        "https://javamail-deployy.onrender.com"), 
 
     new Web("6","Build a JPA project - How to do it ?", 
         "18th October,2024",
