@@ -13,22 +13,22 @@ var webs = [
     new Web("7","Simple java mail project to send emails - How to do it ?", 
         "25th October,2024",
         "https://github.com/t9tieanh/javamail",
-        "https://javamail-deployy.onrender.com"), 
+        "https://tieanh-javamail-production.up.railway.app"), 
 
     new Web("6","Build a JPA project - How to do it ?", 
         "18th October,2024",
         "https://github.com/t9tieanh/jpa-project",
-        "https://jpa-project-deploy.onrender.com"), 
+        "https://tieanh-jpaproject-production.up.railway.app"), 
 
     new Web("5","Implement connection pool to create connection in jdbc - How to do it ?", 
         "9th October,2024",
-        "https://github.com/t9tieanh/Connection-pool",
+        "https://tieanh-connectionpool-production.up.railway.app",
         "https://connection-pool-deploy.onrender.com/home"), 
 
     new Web("4","Create a jdbc application project to execute sql statements - How to do it ?", 
         "3th October,2024",
         "https://github.com/t9tieanh/SqlQuery",
-        "https://sqlquerry-deploy.onrender.com"), 
+        "https://tieanh-sqlquerry-production.up.railway.app/home"), 
 
     new Web("3","Use session in java servlet to create basic shopping cart functionality - How to do it?", 
         "26th September,2024",
@@ -38,7 +38,7 @@ var webs = [
     new Web("2","Build a basic web using Java servlet - How to do it?", 
         "4th September,2024",
         "https://github.com/t9tieanh/basic-web",
-        "https://tieanh-laptrinhweb.onrender.com/trang-chu"), 
+        "https://tieanh-deploywebsite-production.up.railway.app/trang-chu"), 
 
     new Web("1","Build a basic web introduce myself - How to do it?",
         "18th July, 2024 - now",
