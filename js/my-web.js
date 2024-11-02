@@ -10,35 +10,40 @@ function Web (id, title, createDate, linkGithub, linkWeb) {
 
 var webs = [
 
-    new Web("7","Simple java mail project to send emails - How to do it ?", 
+    new Web("8","Simple java mail project to send emails - How to do it ?", 
         "25th October,2024",
         "https://github.com/t9tieanh/javamail",
         "https://tieanh-javamail-production.up.railway.app"), 
 
-    new Web("6","Build a JPA project - How to do it ?", 
+    new Web("7","Build a JPA project - How to do it ?", 
         "18th October,2024",
         "https://github.com/t9tieanh/jpa-project",
         "https://tieanh-jpaproject-production.up.railway.app"), 
 
-    new Web("5","Implement connection pool to create connection in jdbc - How to do it ?", 
+    new Web("6","Implement connection pool to create connection in jdbc - How to do it ?", 
         "9th October,2024",
         "https://github.com/t9tieanh/Connection-pool",
         "https://tieanh-connectionpool-production.up.railway.app"), 
 
-    new Web("4","Create a jdbc application project to execute sql statements - How to do it ?", 
+    new Web("5","Create a jdbc application project to execute sql statements - How to do it ?", 
         "3th October,2024",
         "https://github.com/t9tieanh/SqlQuery",
         "https://tieanh-sqlquerry-production.up.railway.app/home"), 
 
-    new Web("3","Use session in java servlet to create basic shopping cart functionality - How to do it?", 
+    new Web("4","Use session in java servlet to create basic shopping cart functionality - How to do it?", 
         "26th September,2024",
         "https://github.com/t9tieanh/shopping-cart",
         "https://tieanh-deploywebsite-production.up.railway.app/shop"), 
 
-    new Web("2","Build a basic web using Java servlet - How to do it?", 
+    new Web("3","Build a basic web using Java servlet - How to do it?", 
         "4th September,2024",
         "https://github.com/t9tieanh/basic-web",
         "https://tieanh-deploywebsite-production.up.railway.app/trang-chu"), 
+
+    new Web("2","Test HTTP Methods - How to do it?", 
+        "4th September,2024",
+        "https://github.com/t9tieanh/basic-web",
+        "https://tieanh-deploywebsite-production.up.railway.app/test"), 
 
     new Web("1","Build a basic web introduce myself - How to do it?",
         "18th July, 2024 - now",
