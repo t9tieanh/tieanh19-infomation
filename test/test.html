@@ -3,53 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MDB Dropdown Example</title>
-    <!-- MDB CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
+    <title>Radio Button Group</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Force dropdown to open to the left */
-        .btn-group.dropstart .dropdown-menu {
-            right: 100%; /* Moves it to the left */
-            left: auto; /* Disable the default left alignment */
+        .size-options label {
+            padding: 10px 15px;
+            margin: 0;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold; /* Đặt màu chữ đậm */
+        }
+
+        .size-options input[type="radio"] {
+            display: none;
+        }
+
+        .size-options input[type="radio"]:checked + label {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .size-options label:not(:last-child) {
+            border-right: none;
         }
     </style>
 </head>
 <body>
+    <div class="container mt-5">
+        <h5>Size:</h5>
+        <div class="btn-group size-options" role="group" aria-label="Size options">
+            <input type="radio" class="btn-check" name="size" id="size40" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="size40">40</label>
 
-  
-    import React from 'react';
-    import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBBtn } from 'mdb-react-ui-kit';
-    
-    export default function App() {
-      return (
-        <>
-          <MDBDropdown dropleft group>
-            <MDBDropdownToggle>Dropleft</MDBDropdownToggle>
-            <MDBDropdownMenu>
-              <MDBDropdownItem link>Action</MDBDropdownItem>
-              <MDBDropdownItem link>Another action</MDBDropdownItem>
-              <MDBDropdownItem link>Something else here</MDBDropdownItem>
-              <MDBDropdownItem divider />
-              <MDBDropdownItem link>Separated link</MDBDropdownItem>
-            </MDBDropdownMenu>
-          </MDBDropdown>
-    
-          <MDBDropdown dropleft group>
-            <MDBBtn>Split Dropleft</MDBBtn>
-            <MDBDropdownToggle />
-            <MDBDropdownMenu>
-              <MDBDropdownItem link>Action</MDBDropdownItem>
-              <MDBDropdownItem link>Another action</MDBDropdownItem>
-              <MDBDropdownItem link>Something else here</MDBDropdownItem>
-              <MDBDropdownItem divider />
-              <MDBDropdownItem link>Separated link</MDBDropdownItem>
-            </MDBDropdownMenu>
-          </MDBDropdown>
-        </>
-      );
-    }
+            <input type="radio" class="btn-check" name="size" id="size41" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="size41">41</label>
 
-  <!-- MDB JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+            <input type="radio" class="btn-check" name="size" id="size42" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="size42">42</label>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
